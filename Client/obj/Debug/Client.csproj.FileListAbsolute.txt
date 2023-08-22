@@ -1,0 +1,30 @@
+C:\Users\lsl06\Documents\Learning Files\远控二开\DcRat-1.0.7\Binaries\Debug\Stub\Client.exe.config
+C:\Users\lsl06\Documents\Learning Files\远控二开\DcRat-1.0.7\Client\obj\Debug\Client.csproj.AssemblyReference.cache
+C:\Users\lsl06\Documents\Learning Files\远控二开\DcRat-1.0.7\Client\obj\Debug\Client.csproj.SuggestedBindingRedirects.cache
+C:\Users\lsl06\Documents\Learning Files\远控二开\DcRat-1.0.7\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\lsl06\Documents\Learning Files\远控二开\DcRat-1.0.7\Client\obj\Debug\Client.exe
+C:\Users\lsl06\Documents\Learning Files\远控二开\DcRat-1.0.7\Client\obj\Debug\Client.pdb
+C:\Users\lsl06\Documents\Learning Files\远控二开\DcRat-20221224\Binaries\Debug\Stub\Client.exe.config
+C:\Users\lsl06\Documents\Learning Files\远控二开\DcRat-20221224\Client\obj\Debug\Client.csproj.AssemblyReference.cache
+C:\Users\lsl06\Documents\Learning Files\远控二开\DcRat-20221224\Client\obj\Debug\Client.csproj.SuggestedBindingRedirects.cache
+C:\Users\lsl06\Documents\Learning Files\远控二开\DcRat-20221224\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\lsl06\Documents\Learning Files\远控二开\DcRat-20221224\Client\obj\Debug\Client.exe
+C:\Users\lsl06\Documents\Learning Files\远控二开\DcRat-20221224\Client\obj\Debug\Client.pdb
+C:\Users\lsl06\Documents\Learning Files\远控二开\DcRat-20230103\Binaries\Debug\Stub\Client.exe.config
+C:\Users\lsl06\Documents\Learning Files\远控二开\DcRat-20230103\Client\obj\Debug\Client.csproj.AssemblyReference.cache
+C:\Users\lsl06\Documents\Learning Files\远控二开\DcRat-20230103\Client\obj\Debug\Client.csproj.SuggestedBindingRedirects.cache
+C:\Users\lsl06\Documents\Learning Files\远控二开\DcRat-20230103\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\lsl06\Documents\Learning Files\远控二开\DcRat-20230103\Client\obj\Debug\Client.exe
+C:\Users\lsl06\Documents\Learning Files\远控二开\DcRat-20230103\Client\obj\Debug\Client.pdb
+C:\Users\lsl06\Documents\Learning Files\远控二开\DcRat-20230105\Binaries\Debug\Stub\Client.exe.config
+C:\Users\lsl06\Documents\Learning Files\远控二开\DcRat-20230105\Client\obj\Debug\Client.csproj.AssemblyReference.cache
+C:\Users\lsl06\Documents\Learning Files\远控二开\DcRat-20230105\Client\obj\Debug\Client.csproj.SuggestedBindingRedirects.cache
+C:\Users\lsl06\Documents\Learning Files\远控二开\DcRat-20230105\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\lsl06\Documents\Learning Files\远控二开\DcRat-20230105\Client\obj\Debug\Client.exe
+C:\Users\lsl06\Documents\Learning Files\远控二开\DcRat-20230105\Client\obj\Debug\Client.pdb
+C:\Users\lsl06\Documents\工具开发\远控二开\DcRAT\完成体\DcRat-20230106\Binaries\Debug\Stub\Client.exe.config
+C:\Users\lsl06\Documents\工具开发\远控二开\DcRAT\完成体\DcRat-20230106\Client\obj\Debug\Client.csproj.AssemblyReference.cache
+C:\Users\lsl06\Documents\工具开发\远控二开\DcRAT\完成体\DcRat-20230106\Client\obj\Debug\Client.csproj.SuggestedBindingRedirects.cache
+C:\Users\lsl06\Documents\工具开发\远控二开\DcRAT\完成体\DcRat-20230106\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\lsl06\Documents\工具开发\远控二开\DcRAT\完成体\DcRat-20230106\Client\obj\Debug\Client.exe
+C:\Users\lsl06\Documents\工具开发\远控二开\DcRAT\完成体\DcRat-20230106\Client\obj\Debug\Client.pdb
