@@ -1,4 +1,0 @@
-C:\Users\lsl06\Documents\工具开发\远控二开\DcRAT\完成体\DcRat-20230106\Plugin\FileManager\FileManager\obj\Debug\FileManager.csproj.AssemblyReference.cache
-C:\Users\lsl06\Documents\工具开发\远控二开\DcRAT\完成体\DcRat-20230106\Plugin\FileManager\FileManager\obj\Debug\FileManager.csproj.CoreCompileInputs.cache
-C:\Users\lsl06\Documents\工具开发\远控二开\DcRAT\完成体\DcRat-20230106\Plugin\FileManager\FileManager\obj\Debug\FileManager.dll
-C:\Users\lsl06\Documents\工具开发\远控二开\DcRAT\完成体\DcRat-20230106\Plugin\FileManager\FileManager\obj\Debug\FileManager.pdb
